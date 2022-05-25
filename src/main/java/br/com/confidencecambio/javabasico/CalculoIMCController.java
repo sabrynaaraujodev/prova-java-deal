@@ -23,9 +23,9 @@ public class CalculoIMCController {
 
     @RequestMapping(value = "/calculaIMC", method = RequestMethod.GET)
     public ResponseEntity<String> calculaIMC(
-            @RequestParam String nome,
-            @RequestParam Double peso,
-            @RequestParam Double altura){
+            @Nullable @RequestParam String nome,
+            @Nullable @RequestParam Double peso,
+            @Nullable @RequestParam Double altura){
         var retorno = "Ola " + serviceIMC.tratamentoNome(nome) + " , seu imc é : " + serviceIMC.calcularImc(peso,altura);
         return new ResponseEntity<>(retorno, HttpStatus.OK);
     }
