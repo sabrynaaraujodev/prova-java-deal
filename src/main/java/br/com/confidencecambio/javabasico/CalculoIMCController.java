@@ -26,7 +26,7 @@ public class CalculoIMCController {
             @RequestParam String nome,
             @RequestParam Double peso,
             @RequestParam Double altura){
-        var retorno = "Ola " + nome.toUpperCase() + " , seu imc é : " + serviceIMC.calcularImc(peso,altura);
+        var retorno = "Ola " + serviceIMC.tratamentoNome(nome) + " , seu imc é : " + serviceIMC.calcularImc(peso,altura);
         return new ResponseEntity<>(retorno, HttpStatus.OK);
     }
 

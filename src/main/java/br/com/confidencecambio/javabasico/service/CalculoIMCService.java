@@ -9,4 +9,8 @@ public class CalculoIMCService {
         double imc = peso / (altura * altura);
         return (int) imc;
     }
+
+    public String tratamentoNome(String nome) {
+        return nome.toUpperCase();
+    }
 }
