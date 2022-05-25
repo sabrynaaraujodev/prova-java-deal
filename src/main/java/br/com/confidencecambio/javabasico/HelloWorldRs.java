@@ -23,10 +23,4 @@ public class HelloWorldRs {
         var retorno = "Ola " + service.retornaValorValido(nome);
         return new ResponseEntity<>(retorno, HttpStatus.OK);
     }
-
-    @RequestMapping(value = "/calculaIMC", method = RequestMethod.GET)
-    public ResponseEntity<String> calculaIMC(@RequestParam(value = "nome", required = true) String nome) {
-        var retorno = "Ola " + nome + service.retornaValorValido(nome);
-        return new ResponseEntity<>(retorno, HttpStatus.OK);
-    }
 }
